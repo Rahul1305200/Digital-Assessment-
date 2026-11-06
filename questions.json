@@ -1,0 +1,295 @@
+{
+  "t0": {
+    "title": "Before your procedure",
+    "label": "Before your session",
+    "intro": "Thank you for participating in the YouMind research study. We would like to understand how you are feeling before your scheduled procedure. Please answer the following questions based on how you feel right now. There are no right or wrong answers. Your responses will not determine or change your medical treatment.",
+    "questions": [
+      {
+        "id": "t0_anxiety",
+        "title": "How anxious or nervous do you feel right now?",
+        "type": "scale",
+        "low": "Not at all anxious or nervous",
+        "high": "Extremely anxious or nervous"
+      },
+      {
+        "id": "t0_relaxation",
+        "title": "How relaxed do you feel right now?",
+        "type": "scale",
+        "low": "Not at all relaxed",
+        "high": "Completely relaxed"
+      }
+    ]
+  },
+  "t2": {
+    "title": "How are you feeling now?",
+    "label": "Before your procedure",
+    "intro": "We would like to ask the same brief questions again. Please answer based on how you feel right now, rather than how you felt earlier.",
+    "questions": [
+      {
+        "id": "t2_anxiety",
+        "title": "How anxious or nervous do you feel right now?",
+        "type": "scale",
+        "low": "Not at all anxious or nervous",
+        "high": "Extremely anxious or nervous"
+      },
+      {
+        "id": "t2_relaxation",
+        "title": "How relaxed do you feel right now?",
+        "type": "scale",
+        "low": "Not at all relaxed",
+        "high": "Completely relaxed"
+      },
+      {
+        "id": "t2_listening_experience",
+        "title": "Overall, how would you describe your experience listening to the YouMind audio?",
+        "type": "choice",
+        "options": [
+          "Pleasant",
+          "Neutral",
+          "Unpleasant"
+        ],
+        "group": "audio"
+      },
+      {
+        "id": "t2_unwanted_effects",
+        "title": "Did you experience any discomfort or unwanted effects during the listening session?",
+        "type": "choice",
+        "options": [
+          "No",
+          "Yes"
+        ],
+        "group": "audio"
+      },
+      {
+        "id": "t2_effects",
+        "title": "What did you experience?",
+        "type": "multi",
+        "options": [
+          "Headache",
+          "Dizziness",
+          "Auditory irritation or discomfort",
+          "Increased anxiety or nervousness",
+          "Other"
+        ],
+        "group": "audio",
+        "when": {
+          "field": "t2_unwanted_effects",
+          "values": [
+            "Yes"
+          ]
+        },
+        "labels": {
+          "Headache": "Headache.",
+          "Dizziness": "Dizziness.",
+          "Auditory irritation or discomfort": "Auditory irritation or discomfort.",
+          "Increased anxiety or nervousness": "Increased anxiety or nervousness.",
+          "Other": "Other."
+        }
+      },
+      {
+        "id": "t2_effect_description",
+        "title": "Please briefly describe:",
+        "type": "text",
+        "group": "audio",
+        "when": {
+          "field": "t2_effects",
+          "values": [
+            "Other"
+          ]
+        }
+      }
+    ]
+  },
+  "evening": {
+    "title": "Tell us about your day",
+    "label": "After your procedure",
+    "intro": "Please answer based on what you remember from today. This questionnaire is for research purposes and is not monitored as an emergency medical service. For urgent medical concerns, follow your clinic’s discharge instructions or seek appropriate urgent medical care.",
+    "questions": [
+      {
+        "id": "evening_overall_experience",
+        "title": "How would you rate your overall experience during today's procedure?",
+        "type": "scale",
+        "low": "Very poor",
+        "high": "Excellent"
+      },
+      {
+        "id": "evening_procedure_anxiety",
+        "title": "Thinking back to today's procedure, how anxious or nervous did you feel during it?",
+        "type": "scale",
+        "low": "Not at all anxious or nervous",
+        "high": "Extremely anxious or nervous"
+      },
+      {
+        "id": "evening_procedure_comfort",
+        "title": "How physically comfortable did you feel during today's procedure?",
+        "type": "scale",
+        "low": "Extremely uncomfortable",
+        "high": "Extremely comfortable"
+      },
+      {
+        "id": "evening_study_difficulty",
+        "title": "Did any part of the research study make your visit more difficult?",
+        "type": "choice",
+        "options": [
+          "No",
+          "Yes",
+          "Unsure"
+        ]
+      },
+      {
+        "id": "evening_difficulty_description",
+        "title": "Please briefly describe what made your visit more difficult.",
+        "type": "text",
+        "when": {
+          "field": "evening_study_difficulty",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      {
+        "id": "evening_intervention_issues",
+        "title": "Did you experience any problems or unwanted effects that you believe may have been associated with the YouMind listening session?",
+        "type": "choice",
+        "options": [
+          "No",
+          "Yes",
+          "Unsure"
+        ],
+        "group": "audio"
+      },
+      {
+        "id": "evening_intervention_issue_description",
+        "title": "Please briefly describe what you experienced.",
+        "type": "text",
+        "group": "audio",
+        "when": {
+          "field": "evening_intervention_issues",
+          "values": [
+            "Yes",
+            "Unsure"
+          ]
+        }
+      },
+      {
+        "id": "evening_willingness_repeat",
+        "title": "Would you be willing to use a similar YouMind listening session before a future medical procedure?",
+        "type": "choice",
+        "options": [
+          "Yes",
+          "No",
+          "Unsure"
+        ],
+        "group": "audio"
+      }
+    ]
+  },
+  "sleep": {
+    "title": "How was your night?",
+    "label": "Optional first-night follow-up",
+    "intro": "Please answer based on last night. If you are unsure of an exact number, your best estimate is sufficient. You may complete this questionnaire whether or not you used the YouMind Sleep Protocol.",
+    "questions": [
+      {
+        "id": "sleep_audio_used",
+        "title": "Did you listen to the YouMind Sleep Protocol last night?",
+        "type": "choice",
+        "options": [
+          "Yes",
+          "No",
+          "Unsure"
+        ]
+      },
+      {
+        "id": "sleep_listening_minutes_reported",
+        "title": "Approximately how many minutes did you listen to the YouMind Sleep Protocol?",
+        "type": "number",
+        "max": 1440,
+        "when": {
+          "field": "sleep_audio_used",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      {
+        "id": "sleep_quality",
+        "title": "How would you rate your sleep last night?",
+        "type": "scale",
+        "low": "Very poor",
+        "high": "Excellent"
+      },
+      {
+        "id": "sleep_total_hours",
+        "title": "Approximately how much time did you spend asleep in total last night?",
+        "type": "number",
+        "max": 24,
+        "hint": "Please include all periods of sleep during the night."
+      },
+      {
+        "id": "sleep_total_minutes",
+        "title": "And how many additional minutes?",
+        "type": "number",
+        "max": 59
+      },
+      {
+        "id": "sleep_awakenings",
+        "title": "Approximately how many times did you wake up during the night?",
+        "type": "number",
+        "max": 100,
+        "hint": "Enter 0 if you do not remember waking during the night."
+      },
+      {
+        "id": "sleep_audio_helpfulness",
+        "title": "How helpful, if at all, did you find the YouMind audio session?",
+        "type": "scale",
+        "low": "Not at all helpful",
+        "high": "Extremely helpful",
+        "when": {
+          "field": "sleep_audio_used",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      {
+        "id": "sleep_audio_unwanted_effects",
+        "title": "Did you experience any discomfort or unwanted effects while listening to the YouMind Sleep Protocol?",
+        "type": "choice",
+        "options": [
+          "No",
+          "Yes",
+          "Unsure"
+        ],
+        "when": {
+          "field": "sleep_audio_used",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      {
+        "id": "sleep_audio_effect_description",
+        "title": "Please briefly describe what you experienced.",
+        "type": "text",
+        "when": {
+          "field": "sleep_audio_unwanted_effects",
+          "values": [
+            "Yes",
+            "Unsure"
+          ]
+        }
+      },
+      {
+        "id": "sleep_medication_used",
+        "title": "Did you take any medication specifically to help you sleep last night?",
+        "type": "choice",
+        "options": [
+          "Yes",
+          "No",
+          "Unsure",
+          "Prefer not to answer"
+        ]
+      }
+    ]
+  }
+}

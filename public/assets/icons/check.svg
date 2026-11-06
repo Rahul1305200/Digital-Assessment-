@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon" clip-path="url(#clip0_0_13)">
+<path id="Icon 01" d="M12 22.2857C17.6806 22.2857 22.2857 17.6806 22.2857 12C22.2857 6.31936 17.6806 1.71429 12 1.71429C6.31936 1.71429 1.71429 6.31936 1.71429 12C1.71429 17.6806 6.31936 22.2857 12 22.2857Z" stroke="url(#paint0_linear_0_13)" stroke-width="2.22857"/>
+<path id="Icon 02" d="M7.71429 12L11.1429 15.4286L16.2857 10.2857" stroke="url(#paint1_linear_0_13)" stroke-width="2.22857" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_13" x1="12" y1="1.71429" x2="12" y2="22.2857" gradientUnits="userSpaceOnUse">
+<stop stop-color="#199A91"/>
+<stop offset="1" stop-color="#082725"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_13" x1="12" y1="10.2857" x2="12" y2="15.4286" gradientUnits="userSpaceOnUse">
+<stop stop-color="#199A91"/>
+<stop offset="1" stop-color="#082725"/>
+</linearGradient>
+<clipPath id="clip0_0_13">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
