@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouMind video scripts</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0f6c66;--ink:#0b2523;--text:#3a524f;--muted:#4f6664;--mint:#eafcfb;--line:#dbe9e7;--amber-bg:#fff4e2}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,system-ui,sans-serif;background:var(--mint);color:var(--ink);-webkit-font-smoothing:antialiased}
+::selection{background:#bfeee8}
+main{max-width:none;margin:0;padding:28px clamp(16px,3vw,48px) 64px}
+.tabs{display:inline-flex;gap:4px;padding:4px;background:#d6eeea;border-radius:999px;margin-bottom:22px}
+.tab{border:0;background:none;font:inherit;font-size:15px;font-weight:500;color:var(--ink);height:42px;padding:0 22px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:#fff;box-shadow:0 2px 8px rgba(11,37,35,.08)}
+.tab:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;padding:0 4px 10px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+ol.sheet{list-style:none;margin:0;padding:0;background:#fff;border:1px solid var(--line);border-radius:18px}
+ol.sheet>li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:center;padding:26px 28px;border-bottom:1px solid var(--line)}
+ol.sheet>li:last-child{border-bottom:0}
+ol.sheet>li.doctor{background:var(--amber-bg)}
+.pics{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.pics a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 18px rgba(11,37,35,.08)}
+.pics img{display:block}
+.pics img.ph{width:160px}.pics img.wd{width:min(560px,100%)}
+.pics a:not(:only-child) img.wd{width:min(360px,100%)}
+.show h3{margin:16px 0 6px;font-size:17px;font-weight:500}
+.show h3 b{font-weight:600}
+.t{display:inline-block;min-width:66px;margin-right:6px;font-weight:600;color:var(--teal);font-variant-numeric:tabular-nums}
+.show ul{margin:0;padding:0 0 0 72px;list-style:none;display:grid;gap:4px}
+.show ul li{position:relative;font-size:14px;line-height:1.5;color:var(--text)}
+.show ul li::before{content:"";position:absolute;left:-14px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--teal)}
+.say{margin:0;font-size:21px;line-height:1.5;font-weight:500;text-wrap:pretty}
+[hidden]{display:none!important}
+@media(max-width:760px){.head{display:none}ol.sheet>li{grid-template-columns:1fr;gap:14px;padding:18px}.show ul{padding-left:18px}.say{font-size:18px}.pics img.ph{width:42vw;max-width:150px}}
+</style></head>
+<body><main>
+<div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-p="team">Team video</button><button class="tab" role="tab" aria-selected="false" data-p="patient">Patient video</button></div>
+<div class="head" aria-hidden="true"><span>Show</span><span>Say</span></div>
+<ol class="sheet" id="team">
+<li><div class="show"><div class="pics"><a href="script-img/s-login.jpg" target="_blank"><img src="script-img/s-login.jpg" alt="" class="wd"></a></div><h3><span class="t">0–3s</span>Sign in</h3><ul><li>Open the dashboard and sign in with your own team account.</li></ul></div><p class="say">This is the YouMind team dashboard. Derek signs in with his own team account.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-list.jpg" target="_blank"><img src="script-img/t-list.jpg" alt="" class="wd"></a></div><h3><span class="t">3–8s</span>Patients appear in the list</h3><ul><li>Every patient who scanned, consented and answered T0 appears live.</li><li>Each row shows the study code, the email (click to copy) and “waiting for the team”.</li></ul></div><p class="say">Every patient who scans the QR code, gives consent and answers the first two questions appears here live, with their study code and email.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-start.jpg" target="_blank"><img src="script-img/t-start.jpg" alt="" class="wd"></a></div><h3><span class="t">8–13s</span>Press <b>Start session</b></h3><ul><li>Press Start session on the patient’s row.</li><li>The system picks music or no music, keeping the groups 50/50.</li><li>The patient’s phone moves on by itself.</li></ul></div><p class="say">When the patient is ready, Derek presses Start. The system puts them in the music or no-music group, always keeping the two groups fifty-fifty.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-session.jpg" target="_blank"><img src="script-img/t-session.jpg" alt="" class="wd"></a></div><h3><span class="t">13–17s</span>Sessions running</h3><ul><li>Each row shows the group and “Session in progress”.</li><li><b>Stop all music (1)</b> shows how many are listening right now.</li></ul></div><p class="say">The music group listens on headphones, the others wait as usual. Derek can see who is listening at any moment.</p></li>
+<li class="doctor"><div class="show"><div class="pics"><a href="script-img/t-stop.jpg" target="_blank"><img src="script-img/t-stop.jpg" alt="" class="wd"></a></div><h3><span class="t">17–21s</span>Doctor ready: <b>Stop all music</b></h3><ul><li>Press Stop all music → Stop the music now.</li><li>Every music player turns grey and stops within seconds.</li><li>The stop is recorded on each patient’s timeline.</li></ul></div><p class="say">If the doctor is ready, one tap on Stop all music stops every player at once, and the stop is recorded.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-t2.jpg" target="_blank"><img src="script-img/t-t2.jpg" alt="" class="wd"></a></div><h3><span class="t">21–25s</span>Press <b>Open T2 for all</b></h3><ul><li>Opens the before-procedure questions for everyone waiting.</li><li>The music group also answers how the listening went.</li></ul></div><p class="say">Just before the procedure, Open T2 for all sends the same two questions again. The music group also says how the listening went.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-record.jpg" target="_blank"><img src="script-img/t-record.jpg" alt="" class="wd"></a></div><h3><span class="t">25–30s</span>Fill the <b>Study record</b> → Save</h3><ul><li>Open the patient → Study record.</li><li>Procedure, consent, timing, delays, interruptions, safety concerns.</li></ul></div><p class="say">During the procedure, Derek fills in the study record: the procedure, timing, any delay, interruption or safety concern.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/s-close.jpg" target="_blank"><img src="script-img/s-close.jpg" alt="" class="wd"></a></div><h3><span class="t">30–33s</span><b>Close assessment</b> (only if needed)</h3><ul><li>If the procedure starts before a questionnaire is finished.</li><li>Pick the reason, e.g. “Physician ready to proceed”.</li></ul></div><p class="say">If the procedure starts before a questionnaire is finished, Close assessment records the reason, so nothing is left unexplained.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-evening.jpg" target="_blank"><img src="script-img/t-evening.jpg" alt="" class="wd"></a></div><h3><span class="t">33–36s</span>Press <b>Open evening for all</b></h3><ul><li>That evening, opens the follow-up for every patient at once.</li></ul></div><p class="say">That evening, one click opens the evening follow-up for every patient.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-sleep.jpg" target="_blank"><img src="script-img/t-sleep.jpg" alt="" class="wd"></a></div><h3><span class="t">36–39s</span>Press <b>Open sleep for all</b></h3><ul><li>Next morning, opens the optional sleep survey for those who agreed.</li></ul></div><p class="say">Next morning, one click opens the optional sleep survey.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-timeline.jpg" target="_blank"><img src="script-img/t-timeline.jpg" alt="" class="wd"></a><a href="script-img/t-answers.jpg" target="_blank"><img src="script-img/t-answers.jpg" alt="" class="wd"></a></div><h3><span class="t">39–44s</span>Patient page: timeline and answers</h3><ul><li>Listening timeline: played, paused (red), skipped, where it stopped.</li><li>All answers, check-in by check-in. Skipped answers show “Skipped”, never 0.</li></ul></div><p class="say">Each patient’s page shows every answer and the listening timeline: where they played, paused, skipped and stopped.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/t-export.jpg" target="_blank"><img src="script-img/t-export.jpg" alt="" class="wd"></a></div><h3><span class="t">44–47s</span>Press <b>Export CSV</b></h3><ul><li>Participant dataset: one row per patient, ready for analysis.</li><li>Emails are never in the exports.</li></ul></div><p class="say">Finally, Export CSV downloads the study data, one row per patient, ready for analysis.</p></li>
+</ol>
+<ol class="sheet" id="patient" hidden>
+<li><div class="show"><div class="pics"><a href="script-img/p-consent.jpg" target="_blank"><img src="script-img/p-consent.jpg" alt="" class="ph"></a></div><h3><span class="t">0–4s</span>Scan the QR code: consent page</h3><ul><li>Same QR code for everyone. No app, no account.</li></ul></div><p class="say">Just scan the QR code with your phone. No app, no sign-up.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-email.jpg" target="_blank"><img src="script-img/p-email.jpg" alt="" class="ph"></a></div><h3><span class="t">4–9s</span>Tick consent → Start → email</h3><ul><li>Start only works after ticking consent.</li><li>Then enter an email and press Continue.</li></ul></div><p class="say">Read the consent, tick the box, tap Start, and add your email.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-question.jpg" target="_blank"><img src="script-img/p-question.jpg" alt="" class="ph"></a></div><h3><span class="t">9–14s</span>Answer the 2 questions (T0)</h3><ul><li>How anxious, how relaxed: tap a number 0–10.</li></ul></div><p class="say">Answer two quick questions: how anxious and how relaxed you feel right now.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-thanks.jpg" target="_blank"><img src="script-img/p-thanks.jpg" alt="" class="ph"></a></div><h3><span class="t">14–17s</span>“Thank you, please wait”</h3><ul><li>Nothing to do: the team starts the next step.</li></ul></div><p class="say">Then relax. Your study team takes it from here.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-player.jpg" target="_blank"><img src="script-img/p-player.jpg" alt="" class="ph"></a></div><h3><span class="t">17–22s</span>Listen (music group)</h3><ul><li>Headphones on, press play.</li><li>“I’m finished listening” unlocks at the end.</li></ul></div><p class="say">In the music group? Put on your headphones and press play. Everyone else simply waits as usual.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-t2.jpg" target="_blank"><img src="script-img/p-t2.jpg" alt="" class="ph"></a></div><h3><span class="t">22–26s</span>Before the procedure (T2)</h3><ul><li>The same two questions again.</li></ul></div><p class="say">Just before your procedure, answer the same two questions again.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-evening.jpg" target="_blank"><img src="script-img/p-evening.jpg" alt="" class="ph"></a><a href="script-img/p-sleep.jpg" target="_blank"><img src="script-img/p-sleep.jpg" alt="" class="ph"></a></div><h3><span class="t">26–32s</span>Evening, then next morning</h3><ul><li>A short evening check-in, then an optional sleep survey.</li><li>Always the same link.</li></ul></div><p class="say">That evening, a short check-in. Next morning, an optional sleep survey, all on the same link.</p></li>
+<li><div class="show"><div class="pics"><a href="script-img/p-done.jpg" target="_blank"><img src="script-img/p-done.jpg" alt="" class="ph"></a></div><h3><span class="t">32–35s</span>All done</h3><ul><li>A thank-you screen closes the journey.</li></ul></div><p class="say">That’s it. Your answers stay private, linked only to a study code.</p></li>
+</ol>
+</main>
+<script>
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('ol.sheet').forEach(o=>o.hidden=o.id!==b.dataset.p);});
+</script>
+</body></html>
